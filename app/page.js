@@ -75,7 +75,7 @@ const Home = () => {
                 </button>
 
                 {url && (
-                    <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-md text-sm break-all">
+                    <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-md text-sm break-all text-black">
                         Paste URL:{" "}
                         <a className="text-green-700 underline" href={url}>
                             {url}
