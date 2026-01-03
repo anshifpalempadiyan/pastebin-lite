@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
+import clientPromise from "@/lib/mongodb";
 
-export function GET() {
-  return NextResponse.json(
-    { ok: true },
-    { status: 200 }
-  );
+export async function GET() {
+    await clientPromise
+  return NextResponse.json({ ok: true },{ status: 200 });
 }
