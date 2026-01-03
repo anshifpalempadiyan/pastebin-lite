@@ -26,8 +26,13 @@ const PastePage = async ({ params }) => {
     await db.collection("pastes").updateOne({ id }, { $inc: { views_used: 1 } })
 
     return (
-        <main style={{ padding: "20px", whiteSpace: "pre-wrap" }}>
-            <pre>{data.content}</pre>
+        <main className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+            <div className="w-full max-w-2xl bg-white rounded-xl shadow-md p-6">
+                <h1 className="text-xl font-semibold mb-4">Paste</h1>
+                <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-4 rounded-md">
+                    {data.content}
+                </pre>
+            </div>
         </main>
     );
 }
